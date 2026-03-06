@@ -119,8 +119,8 @@ def extract_and_crop_hand(image, landmarks):
     return hand_crop, bbox_px
 
 """
-b. each image processed by: detect hand, extract region, resize
-a. use_fallback: If True, use original image when MediaPipe fails (we do so since the dataset is relatively small)
+a. each image processed by: detect hand, extract region, resize
+b. use_fallback: If True, use original image when MediaPipe fails (we do so since the dataset is relatively small)
 """
 def process_image(image_path, use_fallback=True):
     image = cv2.imread(image_path)
